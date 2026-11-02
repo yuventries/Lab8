@@ -2,7 +2,6 @@
 
 A three-page site that captures a person's details with HTML form elements and displays them on other pages using JavaScript.
 
-**Live site:** https://yuventries.github.io/Lab8/
 
 | Page | What it does |
 |------|--------------|
