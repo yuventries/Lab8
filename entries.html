@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All records · Registry</title>
+<meta name="description" content="Browse and search every saved registration record.">
+<meta name="theme-color" content="#f6f4ef">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%2314171f'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='20' text-anchor='middle' fill='%23f6f4ef'%3ER%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="masthead">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Registry <small>Lab 8</small></a>
+    <nav aria-label="Main"><ul>
+      <li><a href="index.html">Register</a></li>
+      <li><a href="profile.html">Latest record</a></li>
+      <li><a href="entries.html" aria-current="page">All records</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <div class="page-head">
+    <div>
+      <p class="eyebrow">Register of persons</p>
+      <h1>All records</h1>
+      <p class="lede">Every person registered in this browser, newest first. Select a name to open the full record.</p>
+    </div>
+  </div>
+  <p id="live" class="sr-only" role="status"></p>
+  <div id="list">
+    <div class="ledger-tools">
+      <div class="search">
+        <label for="search">Search records</label>
+        <input type="search" id="search" placeholder="Name, email, city, or record number" autocomplete="off">
+      </div>
+      <div class="ledger-meta">
+        <span id="count" aria-live="polite"></span>
+        <button id="clearAll" type="button" class="remove">Remove all</button>
+      </div>
+    </div>
+    <table>
+      <caption class="sr-only">Registered persons</caption>
+      <thead><tr><th scope="col">No.</th><th scope="col">Name</th><th scope="col">Gender</th><th scope="col">Contact</th><th scope="col">Location</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div id="empty" class="empty" hidden>
+    <h2>No records yet</h2>
+    <p>When someone completes the registration form, their record is listed here.</p>
+    <a class="btn btn-primary" href="index.html">Register the first person</a>
+  </div>
+</main>
+<footer><div class="wrap"><span>Records are kept in this browser only (localStorage). Nothing is sent to a server.</span><span>Lab 8 · Web Technologies</span></div></footer>
+<script src="js/app.js"></script>
+<script src="js/entries.js"></script>
+</body>
+</html>
